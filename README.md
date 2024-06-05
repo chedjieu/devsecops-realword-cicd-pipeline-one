@@ -1,8 +1,8 @@
 # DevSecOps CI/CD Pipeline Project Automation Arch
-![ProjectArch](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/DevSecOps-Project-Archas.png)
+![ProjectArch](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/DevSecOps-Project-Archas.png)
 
 ## Continuous Observability (Monitoring & Logging) Arch
-![PromGrafEFKArch](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/prom-graf-efk.avif)
+![PromGrafEFKArch](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/prom-graf-efk.avif)
 
 ###### Project ToolBox 🧰
 - [Git](https://git-scm.com/) Git is a distributed version control system that helps you track changes in any set of computer files, usually used for coordinating work among developers who collaboratively develops software.
@@ -47,12 +47,12 @@
     - Click on `Start For Free`
     - Select `Sign up with GitHub`
     - Once you sign up, you should have a page that looks like this...
-    ![GitGuardian!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/ererere.png)
+    ![GitGuardian!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/ererere.png)
 
 3) Create An IAM Profile/Role For The `Jenkins-CI` Server
 - Create an EC2 Service Role in IAM with AdministratorAccess Privilege 
 - Navigate to IAM
-![IAM!](https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/zdocs/images/Screen%20Shot%202023-10-03%20at%206.20.44%20PM.png)
+![IAM!](https://github.com/chedjieu/realworld-cicd-pipeline-project/blob/zdocs/images/Screen%20Shot%202023-10-03%20at%206.20.44%20PM.png)
     - Click on `Roles`
     - Click on `Create Role`
     - Select `Service Role`
@@ -74,7 +74,7 @@
         - What we actually need: `8080`, `9000` and `22` to `0.0.0.0/0`
     - Storage: Increase to `50 GB`
     - IAM instance profile: Select the `AWS-EC2FullAccess-Role`
-    - User data (Copy the following user data): https://github.com/awanmbandi/realworld-microservice-project/blob/dev-sec-ops-cicd-pipeline-project-one/installations.sh
+    - User data (Copy the following user data): https://github.com/chedjieu/realworld-microservice-project/blob/dev-sec-ops-cicd-pipeline-project-one/installations.sh
     - Launch Instance
 
 #### ⚠️ NOTE:ALERT ⚠️
@@ -105,7 +105,7 @@ docker run -d --name PROVIDE_NAME_HERE -v sonarqube-volume:/opt/sonarqube/data -
       - Click `Add Jenkins CI Integration`
       - Scrol Down and Click `SAVE SETTINGS/CONFIGURATIONS`
       - Leave this page open
-      ![SlackConfig!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/efafdf.png)
+      ![SlackConfig!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/efafdf.png)
 
 ### 5A) Verify the Following Services are running in the Jenkins Instance
 - SSH into the `Jenkins-CI` server
@@ -161,8 +161,8 @@ terraform apply --auto-approve
 ```
 - Navigate to `EKS` and confirm your Cluster was created successfully
 - Also confirmthere's no issue regarding your Terraform execution
-![JenkinsSetup1!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsdsdas.png)
-![JenkinsSetup2!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sfgsfs.png)
+![JenkinsSetup1!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsdsdas.png)
+![JenkinsSetup2!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sfgsfs.png)
 
 ### Jenkins setup
 1) #### Access Jenkins
@@ -171,7 +171,7 @@ terraform apply --auto-approve
     - Copy the Path from the Jenkins UI to get the Administrator Password
         - Run: `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
         - Copy the password and login to Jenkins
-    ![JenkinsSetup1!](https://github.com/awanmbandi/realworld-cicd-pipeline-project/raw/zdocs/images/jenkins-signup.png) 
+    ![JenkinsSetup1!](https://github.com/chedjieu/realworld-cicd-pipeline-project/raw/zdocs/images/jenkins-signup.png) 
     - Plugins: Choose `Install Suggested Plugings` 
     - Provide 
         - Username: **`admin`**
@@ -179,7 +179,7 @@ terraform apply --auto-approve
         - `Name` and `Email` can also be admin. You can use `admin` all, as its a poc.
     - Click `Continue`
     - Click on `Start using Jenkins`
-    ![JenkinsSetup2!](https://github.com/awanmbandi/realworld-cicd-pipeline-project/raw/zdocs/images/Screen%20Shot%202023-04-24%20at%208.49.43%20AM.png) 
+    ![JenkinsSetup2!](https://github.com/chedjieu/realworld-cicd-pipeline-project/raw/zdocs/images/Screen%20Shot%202023-04-24%20at%208.49.43%20AM.png) 
 
 2)  #### Plugin installations:
     - Click on `Manage Jenkins`
@@ -209,13 +209,13 @@ terraform apply --auto-approve
     - Click on `Install`
     - Once all plugins are installed
     - Select/Check the Box **Restart Jenkins when installation is complete and no jobs are running**
-    ![PluginInstallation!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/afda.png)
+    ![PluginInstallation!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/afda.png)
     - Refresh your Browser and Log back into Jenkins
     - Once you log back into Jenkins
 
 3)  #### Global tools configuration:
     - Click on Manage Jenkins -->> Global Tool Configuration
-    ![JDKSetup!](https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/zdocs/images/sdsdsdsdsd.png)
+    ![JDKSetup!](https://github.com/chedjieu/realworld-cicd-pipeline-project/blob/zdocs/images/sdsdsdsdsd.png)
 
     - **JDK** 
         - Click on `Add JDK` -->> Make sure **Install automatically** is enabled 
@@ -226,20 +226,20 @@ terraform apply --auto-approve
         * Select `Install from adoptium.net` 
         * Version: **`jdk-17.0.8.1+1`**
 
-        ![JDKSetup!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdfbdasb.png)
+        ![JDKSetup!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdfbdasb.png)
     
     - **SonarQube Scanner** 
       - Click on `Add SonarQube Scanner` 
       - Name: `SonarScanner`
       - Enable: `Install automatically` 
-      ![SonarQubeScanner!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/dcsdsvsvd.png)
+      ![SonarQubeScanner!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/dcsdsvsvd.png)
     
     - **NodeJS installations** 
       - Click on `Add NodeJS` 
       - Name: `NodeJS16`
       - Enable: `Install automatically` 
       - Version: Select `16.2.0`
-      ![SonarQubeScanner!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdvsvsd.png)
+      ![SonarQubeScanner!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdvsvsd.png)
 
     - **Dependency-Check installations** 
       - Click on `Add Dependency-Check`
@@ -248,7 +248,7 @@ terraform apply --auto-approve
         - Select `Install from github.com` 
       - Enable: `Install automatically`
       - Version: Select `6.5.1`
-      ![SonarQubeScanner!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/SDSVFSD.png)
+      ![SonarQubeScanner!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/SDSVFSD.png)
     
     - **Docker installations** 
       - Click on `Add Docker` 
@@ -257,7 +257,7 @@ terraform apply --auto-approve
         - Select `Download from docker.com`
         - Docker version: `latest`
       - Enable: `Install automatically` 
-      ![SonarQubeScanner!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/svfdsv.png)
+      ![SonarQubeScanner!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/svfdsv.png)
     
     - **Terraform Installation** 
       - Click on `Add Terraform` 
@@ -265,7 +265,7 @@ terraform apply --auto-approve
       - Disable/Uncheck: `Install automatically` 
         - NOTE: *Please Do Not Check The ``Install automatically`*
       - Install directory: provide `/usr/bin/`
-      ![SonarQubeScanner!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/ASFADAD.png)
+      ![SonarQubeScanner!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/ASFADAD.png)
 
 4)  #### Credentials setup(SonarQube, Slack, DockerHub, Kubernetes and ZAP):
     - Click on `Manage Jenkins` 
@@ -299,7 +299,7 @@ terraform apply --auto-approve
               - Click on the `User Profile` icon at top right of SonarQube
               - Click on `My Account`
               - Generate Token:   *Generate this TOKEN and Use in the Next Step to Create The SonarQube Credential* 
-              ![Sonar!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsdsddsd.png) 
+              ![Sonar!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsdsddsd.png) 
               - Click `Generate` 
 
           - ###### Store SonarQube Secret Token in Jenkins:
@@ -401,20 +401,20 @@ terraform apply --auto-approve
               - Key: Click on `Add`
               - Key: `Paste The Private Key Content You Copied`
             - Click on `Create`
-        ![KubeCredential!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/afdafdsfgfg.png)
+        ![KubeCredential!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/afdafdsfgfg.png)
 
 ### SonarQube Configuration
 1)  ### Setup SonarQube GateKeeper
     - Click on `Quality Gate` 
     - Click on `Create`
     - Name: `NodeJS-Webapp-QualityGate`
-    ![SonarQubeSetup2!](https://github.com/awanmbandi/realworld-cicd-pipeline-project/blob/zdocs/images/dsdsdsdsdsdsds.png)
+    ![SonarQubeSetup2!](https://github.com/chedjieu/realworld-cicd-pipeline-project/blob/zdocs/images/dsdsdsdsdsdsds.png)
     - Click on `Save` to Create
-    ![SonarQubeSetup2!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsds.png)
+    ![SonarQubeSetup2!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsds.png)
     - Click on `Unlock Editing`
         - **NOTE:** *IMPORTANT*
     - Click `Add Condition` to Add a Quality Gate Condition to Validate the Code Against (Code Smells or Bugs)
-    ![SonarQubeSetup3!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsdsdsd.png)
+    ![SonarQubeSetup3!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsdsdsd.png)
     
     - Add Quality to SonarQube Project
     -  ``NOTE:`` Make sure to update the `SonarQube` stage in your `Jenkinsfile` and Test the Pipeline so your project will be visible on the SonarQube Project Dashboard.
@@ -424,7 +424,7 @@ terraform apply --auto-approve
       - Click on `Quality Gate`
       - Select your QG `NodeJS-Webapp-QualityGate`
 
-    ![SonarQubeSetup3!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdvfsv.png)
+    ![SonarQubeSetup3!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdvfsv.png)
 
 2)  ### Setup SonarQube Webhook to Integrate Jenkins (To pass the results to Jenkins)
     - Click on `Administration` 
@@ -432,7 +432,7 @@ terraform apply --auto-approve
     - Click on `Create Webhook` 
       - Name: `jenkinswebhook`
       - URL: `http://Jenkins-Server-Private-IP:8080/sonarqube-webhook/`
-    ![SonarQubeSetup4!](https://github.com/awanmbandi/realworld-cicd-pipeline-project/raw/zdocs/images/Screen%20Shot%202023-04-24%20at%2011.08.26%20AM.png)
+    ![SonarQubeSetup4!](https://github.com/chedjieu/realworld-cicd-pipeline-project/raw/zdocs/images/Screen%20Shot%202023-04-24%20at%2011.08.26%20AM.png)
 
     - Go ahead and Confirm in the Jenkinsfile you have the “Quality Gate Stage”. The stage code should look like the below;
     ```bash
@@ -456,7 +456,7 @@ terraform apply --auto-approve
         - Name: `Sonar-Server`
         - Server URL: http://YOUR_JENKINS_PRIVATE_IP:9000
         - Server authentication token: Select `SonarQube-Credential`
-        ![SonarQubeServerSetup!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/vfsvfs.png)
+        ![SonarQubeServerSetup!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/vfsvfs.png)
 
     2)  - Still on `Manage Jenkins` and `Configure System`
         - Scroll down to the `Slack` Section (at the very bottom)
@@ -467,7 +467,7 @@ terraform apply --auto-approve
             - Default channel / member id: `#PROVIDE_YOUR_CHANNEL_NAME_HERE`
             - Click on `Test Connection`
             - Click on `Apply` and `Save`
-        ![SlackSetup!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdgsdfg.png)
+        ![SlackSetup!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdgsdfg.png)
 
 ### Update the EKS Cluster Security Group (Add A NodePort)
 - Navigate to `EC2`
@@ -502,19 +502,19 @@ kubectl apply -f .
 kubectl get ns
 kubectl get all -n efklog
 ```
-![EFKStack!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsfbsfb.png)
+![EFKStack!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsfbsfb.png)
   - Access the `Kibana Dashboard`: *KIBANA_LOADBALANCER_URL:5601*
   - Click on `Explore on my own`
   - Click on `Discovery` and create an `Index Pattern`
   - Index Pattern: `logstash*`
-  ![Kibana1](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/asfsbsfb.png) 
+  ![Kibana1](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/asfsbsfb.png) 
 
   - Time Filter field name: Select `@timestamp` 
   - Click `Create Index Pattern`
-  ![Kibana1](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdgsvd.png) 
+  ![Kibana1](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdgsvd.png) 
 
   - Confirm that you atleast have some `Logs` displayed on the `Kibana Discovery Page`
-  ![Kibana1](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sgfsgs.png) 
+  ![Kibana1](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sgfsgs.png) 
 
 2) ### Deploy and Configure Prometheus and Grafana
 - Navigate back to your `Jenkins-CI SSH Shell` where you're logged in
@@ -534,15 +534,15 @@ kubectl get ns
 kubectl get pods -n monitoring
 kubectl get svc -n monitoring
 ```
-![Prom&Graf1](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdsdsd.png)
-![Prom&Graf1](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/Prom-Grafana.png)
+![Prom&Graf1](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdsdsd.png)
+![Prom&Graf1](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/Prom-Grafana.png)
 
 #### Access the PROMETHEUS Dashboard
 - RUN: `kubectl get svc -n monitoring`
 - COPY the DNS of the LoadBalancer of the Service: `monitoring-kube-prometheus-prometheus`
     - **NOTE:** *You can as well get this from the EC2 --> LoadBalancer service*
 - Open a new tab: http://YOUR_PROMETHEUS_LOADBALANCER_DNS:9090
-![Prom&Graf1](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/PROMETHEUS.png)
+![Prom&Graf1](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/PROMETHEUS.png)
 
 #### Access the GRAFANA Dashboard
 - RUN: `kubectl get svc -n monitoring`
@@ -551,7 +551,7 @@ kubectl get svc -n monitoring
 - Open a new tab: http://YOUR_GRAFANA_LOADBALANCER_DNS:9090
     - Username: `admin`
     - Password: `prom-operator`
-![Prom&Graf1](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sddsds.png)
+![Prom&Graf1](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sddsds.png)
 
 #### Access Your Project Pre-Build Dashboards
 - Click on `HOME`
@@ -561,7 +561,7 @@ kubectl get svc -n monitoring
     - `Kubernetes / Networking / Pod`
 
 - Click on the `Node Exporter / USE Method / Node` 
-![Prom&Graf1](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdvsdv.png)
+![Prom&Graf1](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdvsdv.png)
 
 ### Pipeline creation (Make Sure To Make The Following Updates First)
 - UPDATE YOUR ``Jenkinsfile``
@@ -593,7 +593,7 @@ kubectl get svc -n monitoring
     - SSH Back into your `Jenkins-CI` Server
         - RUN: `kubectl get svc -n test-env`
         - **NOTE:** COPY the Exposed `NodePort Pod Number`
-        ![NodeportTestEnv](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/dssdsdsds.png)
+        ![NodeportTestEnv](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/dssdsdsds.png)
     
     - Access The Application Running in the `Test Environment` within the Cluster
     - `Update` the EKS Cluster Security Group ***(If you've not already)***
@@ -602,42 +602,42 @@ kubectl get svc -n monitoring
       - Click on `Edit Inbound Rules`: Port = `30000` and Source `0.0.0.0/0`
     - Open your Browser
     - Go to: http://YOUR_KUBERNETES_WORKER_NODE_IP
-    ![TestEnv](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/test.png)
+    ![TestEnv](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/test.png)
 
     - Stage Deployment Succeeded
-    ![TestEnv](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsds.png)
+    ![TestEnv](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsds.png)
 
     - Production Deployment Succeeded
-    ![ProdEnv](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/dffdffdd.png) 
+    ![ProdEnv](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/dffdffdd.png) 
         - To access the application running in the `Prod-Env`
         - Navigate back to the `Jenkins-CI` shell 
         - RUN: `kubectl get svc`
         - Copy the LoadBalancer DNS and Open on a TAB on your choice Browser http://PROD_LOADBALANCER_DNS
-        ![TestEnv](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/test.png)
+        ![TestEnv](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/test.png)
     
     - You can as well get this from the LoadBalancer Service in EC2:
-    ![TestEnv](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/SDSDDS.png)
+    ![TestEnv](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/SDSDDS.png)
 
     - SonarQube Code Inspection Result
-    ![SonarQubeResult!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdsds.png)
+    ![SonarQubeResult!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdsds.png)
 
     - OWASP Dependency Inspection Result
-    ![SonarQubeResult!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/OWASP.png)
+    ![SonarQubeResult!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/OWASP.png)
 
     - Slack Continuous Feedback Alert
-    ![SlackResult!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsddsdsdsdsds.png)
+    ![SlackResult!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsddsdsdsdsds.png)
 
     - SonarQube GateKeeper Webhook Payload
-    ![SonarQubeGateKeeper!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdsd.png)
+    ![SonarQubeGateKeeper!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdsd.png)
 
     - Trivy CIS, NSA and PSS Cluster and Application Reports
-    ![SonarQubeResult!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdssdsdsds.png)
+    ![SonarQubeResult!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdssdsdsds.png)
 
     - EFK - Kibana Dashbaord
-    ![Kibana!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/kibana.png)
+    ![Kibana!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/kibana.png)
 
     - EFK - Grafana Dashbaord (Pods)
-    ![Kibana!](https://github.com/awanmbandi/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdds.png)
+    ![Kibana!](https://github.com/chedjieu/realworld-microservice-project/blob/zdocs/images/sdsdsdsdsdsdsdds.png)
 
     - GET the Following Compliance Reports (`CIS`, `NSA` and `PSS`)
     ![ComplianceReports!]()
